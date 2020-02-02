@@ -1,0 +1,152 @@
+*{
+    margin : 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.image{
+    min-width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/big-book-shelf.jpg');
+    
+    height : 560px;
+    position: relative;
+}
+
+.headertext{
+    padding: 10px;
+    font-size: 1.8em;
+    font-family: sans-serif;
+    font-weight: 400;
+    position: absolute;
+    background-color: rgba(70, 34, 34, 0.5) ;
+    border-radius: 20px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.header_tag{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.block{
+    position: relative;
+}
+
+ul{
+    list-style-type: none;
+
+}
+
+li{
+    text-decoration: none;
+}
+
+.container{
+    background-color: white;
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+.innerblock{
+    margin-top: 20px;
+}
+
+span{
+    font-family: monospace;
+}
+
+.block h4 {
+    background-color:#DDD;
+    border-radius: 5px;
+    box-shadow: 5px 5px grey;
+    text-align: center;
+    padding: 9px;
+    cursor: pointer;
+}
+
+
+.toggle{
+    padding: 35px;
+    display: none;
+    transition: display 2s ease-out;
+}
+
+.final{
+    margin-top: 100px;
+}
+
+.magic{
+    display: block;
+}
+
+.footer{
+    text-align: center;
+    font-family: monospace;
+    font-size: 12px;
+    background-color: rgb(34, 32, 32);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.footer-items{
+    flex-grow: 1;
+    margin: 20px 0;
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.footer div h5{
+    border-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media( max-width : 800px){
+    h1{
+        font-size: 35px;
+    }
+    .image{
+        height: 450px;
+    }
+    .container{
+        width: 85%;
+    }
+    .footer-items{
+        width: 50%;
+    }
+
+}
+@media( max-width : 560px){
+    .image{
+        background-image: url('../images/blur-book-stack.jpg');
+    }
+    h1{
+        font-size: 25px;
+    }
+    .container{
+        width: 95%;
+    }
+    .image{
+        height: 350px;
+    }
+    .footer-items{
+        width: 100%;
+    }
+}
