@@ -134,9 +134,7 @@ a{
 
 }
 @media( max-width : 560px){
-    .image{
-        background-image: url('../images/blur-book-stack.jpg');
-    }
+
     h1{
         font-size: 25px;
     }
