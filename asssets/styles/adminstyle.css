@@ -1,15 +1,26 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+.block{
+    width: 90%;
+    margin: auto;
 }
 
 .container{
     background-attachment: fixed;
     width: 100%;
     background: url('../images/woman-writing.jpg') no-repeat center;
+    clear: both;
 }
 
-input , textarea ,button{
+input , textarea ,button , .flex{
     background-color: rgba(250, 250, 250, 0.5);
     margin: 10px;
     width: 70%;
@@ -17,9 +28,61 @@ input , textarea ,button{
     padding: 5px;
     text-align: center;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+img{
+    width: 30%;
+    float : right;
+    padding: 20px;
+}
+img::after{
+    content: "";
+    clear: both;
 }
 
 form{
+    margin: auto;
+    text-align: center;
+}
+
+input , textarea,button{
+    text-align: center;
+    margin: auto;
+    margin: 20px ;
+    font-size: 18px;
+}
+
+input , button{
+    height: 35px;
+}
+
+input:focus,textarea:focus{
+    width: 72%;
+    border:2px solid springgreen;
+}
+
+textarea{
+    font-size: 20px;
+    color: green;
+}
+
+.feed{
+    margin-right: auto;
+    margin-left: auto;
+    color: green;
+    width: 30%;
+    margin-bottom: -20px;
+    background-color: rgba(250, 250, 250, 0.5);
+}
+
+p{
+    margin: 30px;
+    font-size: 20px;
+}
+
+form{
+    padding: 40px 0;
     margin: auto;
     width: 70%;
 }
@@ -28,33 +91,95 @@ form{
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     margin: auto;
+}
+
+.flex p {
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+    color: green;
+    display: block;
 }
 
 .dob{
     flex-grow: 1;
     width: 30%;
     align-items: center;
+    margin: 5px;
 }
+
+.dob input{
+    margin:1px;
+}
+
 .slash{
     align-items: center;
 }
 
 button:hover{
-    background-color: #AAA;
+    background-color: rgb(48, 172, 48);
 }
 
+footer ul{
+    list-style-type: none;
+
+}
+
+ li{
+    text-decoration: none;
+}
+
+.footer{
+    text-align: center;
+    font-family: monospace;
+    font-size: 12px;
+    background-color: rgb(34, 32, 32);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.footer-items{
+    flex-grow: 1;
+    margin: 20px 0;
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.footer div h5{
+    border-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
 
 @media(max-width : 650px){
+    img{
+        width: 50%;
+    }
     form{
         margin: auto;
         width: 100%;
     }
+    .footer-items{
+        width: 50%;
+    }
 }
 
-@media(max-width : 350px){
-    input , textarea ,button{
+@media(max-width : 400px){
+    img{
         width: 90%;
+        display: block;
+    }
+    input , textarea ,button{
+        width: 85%;
+    }
+    .footer-items{
+        width: 100%;
     }
 }

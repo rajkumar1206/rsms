@@ -2,6 +2,15 @@
     margin : 0;
     padding: 0;
     line-height: 1.5em;
+    overflow-x: hidden;
+}
+
+p{
+    font-size: 18px;
+}
+
+section{
+    padding: 30px 0;
 }
 
 a:hover{
@@ -10,13 +19,14 @@ a:hover{
 
 .image{
     min-width: 100%;
-    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('../images/big-book-shelf.jpg');
+    -o-background-attachment: fixed;
+    background-attachment: fixed;
+    background-image: url('../images/blur-book.jpg');
     
-    height : 560px;
+    height : 100vh;
     position: relative;
 }
 
@@ -40,15 +50,17 @@ a:hover{
 }
 
 .block{
+    padding: 30px 0;
     position: relative;
+    border-radius: 10px;
 }
 
-ul{
+footer ul{
     list-style-type: none;
 
 }
 
-li{
+ li{
     text-decoration: none;
 }
 
@@ -59,36 +71,74 @@ li{
     text-align: center;
 }
 .innerblock{
-    margin-top: 20px;
+    position: relative;
+    margin: 20px 0;
 }
 
 span{
     font-family: monospace;
 }
 
-.block h4 {
-    background-color:#DDD;
+.block  {
+    background-image: url('../images/books-bookshelf-education.jpg');
+    -o-background-attachment: fixed;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.block h4{
     border-radius: 5px;
-    box-shadow: 5px 5px grey;
+    box-shadow: 0px 2px grey;
     text-align: center;
     padding: 9px;
     cursor: pointer;
 }
 
+.block .innerblock  {
+    background-color: rgba(255,255,255,0.5);
+}
 
 .toggle{
     padding: 35px;
     display: none;
-    transition: display 2s ease-out;
-}
-
-.final{
-    margin-top: 100px;
 }
 
 .magic{
+    opacity: 1;
     display: block;
+    animation-name: togglemode;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
 }
+
+@keyframes togglemode {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.animation{
+    animation-name: motion;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+}
+
+@keyframes motion {
+    100% {
+        left:0;
+    }
+}
+
+.final{
+    margin-top: 40px;
+}
+
 
 .footer{
     text-align: center;
@@ -103,14 +153,19 @@ span{
 
 .footer-items{
     flex-grow: 1;
-    margin: 20px 0;
+    margin: 30px 0;
     box-sizing: border-box;
     width: 25%;
 }
 
+footer li{
+    margin: 4px 0;
+    font-size: 16px;
+}
+
 .footer div h5{
     border-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 a{
@@ -142,7 +197,8 @@ a{
         width: 95%;
     }
     .image{
-        height: 350px;
+        height: 400px;
+        background-attachment: scroll;
     }
     .footer-items{
         width: 100%;
